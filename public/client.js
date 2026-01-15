@@ -251,10 +251,7 @@ socket.on("newTurn", (payload) => {
 socket.on("yourWord", ({ word }) => {
   currentWord = word;
   wordReveal.textContent = `Your word: ${word}`;
-  wordLabel.textContent = word
-    .split("")
-    .map(() => "_")
-    .join(" ");
+  wordLabel.textContent = word;
 });
 
 socket.on("chatMessage", ({ playerName, message }) => {
